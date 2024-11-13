@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="authSection" style="text-align: center;">
+        <button onclick="showLoginForm()">Login</button>
+        <button onclick="showRegisterForm()">Register</button>
+    </div>
+    <div id="todoSection" style="display: none; text-align: center;">
+
+    <h1 class="title">ToDo App</h1>
+   <div  class="input-container" style="text-align: center;"> <input type="text" placeholder="Enter Item" name="" id="todoInput">
+    <button onclick="addItem()"> Add Item</button>
+    <button id="deleteAllBtn" onclick="deleteAll()" style="display: none; margin-bottom: 10px; margin-top: 10px;">Delete All Items</button>
+   </div>
+   <ul id="listItems" class="item-list"></ul>
+   </div>
+
+</body>
+<script src="todoapp.js"></script>
+</html>
